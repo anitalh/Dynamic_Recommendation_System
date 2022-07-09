@@ -1,0 +1,11 @@
+from textblob import TextBlob
+from textblob.sentiments import NaiveBayesAnalyzer
+import json
+
+
+class sentimentsAnalyser:
+ 
+  def analyseSentiments(self,msg):
+    blob = TextBlob(msg, analyzer=NaiveBayesAnalyzer())
+    analysed_tweet= blob.sentiment
+    print(analysed_tweet)
